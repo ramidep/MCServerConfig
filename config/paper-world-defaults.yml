@@ -1,3 +1,17 @@
+# This is the world defaults configuration file for Paper.
+# As you can see, there's a lot to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# 
+# If you need help with the configuration or have any questions related to Paper,
+# join us in our Discord or check the docs page.
+# 
+# Configuration options here apply to all worlds, unless you specify overrides inside
+# the world-specific config file inside each world folder.
+# 
+# Discord: https://discord.gg/papermc
+# Website: https://papermc.io/
+# Docs: https://docs.papermc.io/
+
 _version: 28
 anticheat:
   anti-xray:
@@ -37,28 +51,38 @@ anticheat:
     items:
       hide-durability: false
       hide-itemmeta: false
+  world_nether:
+    anti-xray:
+      hidden-blocks:
+      - ancient_debris
+      - nether_gold_ore
+      - nether_quartz_ore
+      max-block-height: 128
+  world_the_end:
+    anti-xray:
+      enabled: false
 chunks:
   auto-save-interval: default
   delay-chunk-unloads-by: 10s
   entity-per-chunk-save-limit:
-    experience_orb: 16
+    area_effect_cloud: 8
     arrow: 16
     dragon_fireball: 3
     egg: 8
     ender_pearl: 8
+    experience_bottle: 3
+    experience_orb: 16
     eye_of_ender: 8
     fireball: 8
-    small_fireball: 8
     firework_rocket: 8
-    potion: 8
     llama_spit: 3
+    potion: 8
     shulker_bullet: 8
+    small_fireball: 8
     snowball: 8
     spectral_arrow: 16
-    experience_bottle: 3
     trident: 16
     wither_skull: 4
-    area_effect_cloud: 8
   fixed-chunk-inhabited-time: -1
   max-auto-save-chunks-per-tick: 8
   prevent-moving-into-unloaded-chunks: true
@@ -124,33 +148,33 @@ entities:
     alt-item-despawn-rate:
       enabled: true
       items:
-        cobblestone: 300
-        netherrack: 300
-        sand: 300
-        red_sand: 300
-        gravel: 300
-        dirt: 300
-        grass: 300
-        pumpkin: 300
-        melon_slice: 300
-        kelp: 300
+        acacia_leaves: 300
+        andesite: 300
         bamboo: 300
+        birch_leaves: 300
+        cactus: 300
+        cobblestone: 300
+        dark_oak_leaves: 300
+        diorite: 300
+        dirt: 300
+        granite: 300
+        grass: 300
+        gravel: 300
+        jungle_leaves: 300
+        kelp: 300
+        melon_slice: 300
+        netherrack: 300
+        oak_leaves: 300
+        pumpkin: 300
+        red_sand: 300
+        sand: 300
+        scaffolding: 600
+        spruce_leaves: 300
         sugar_cane: 300
         twisting_vines: 300
         weeping_vines: 300
-        oak_leaves: 300
-        spruce_leaves: 300
-        birch_leaves: 300
-        jungle_leaves: 300
-        acacia_leaves: 300
-        dark_oak_leaves: 300
-        cactus: 300
-        diorite: 300
-        granite: 300
-        andesite: 300
-        scaffolding: 600
     count-all-mobs-for-spawning: false
-    creative-arrow-despawn-rate: 20
+    creative-arrow-despawn-rate: '20'
     despawn-ranges:
       ambient:
         hard: 56
@@ -183,7 +207,7 @@ entities:
     filter-nbt-data-from-spawn-eggs-and-related: true
     iron-golems-can-spawn-in-air: false
     monster-spawn-max-light-level: -1
-    non-player-arrow-despawn-rate: 20
+    non-player-arrow-despawn-rate: '20'
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
     skeleton-horse-thunder-spawn-chance: default
@@ -271,7 +295,7 @@ misc:
   disable-sprint-interruption-on-attack: false
   light-queue-size: 20
   max-leash-distance: 10.0
-  redstone-implementation: alternate-current
+  redstone-implementation: ALTERNATE_CURRENT
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
   update-pathfinding-on-block-update: false
@@ -285,27 +309,17 @@ spawn:
 tick-rates:
   behavior:
     villager:
-      validatenearbypoi: 60
       acquirepoi: 120
+      validatenearbypoi: 60
   container-update: 1
   grass-spread: 4
   mob-spawner: 2
   sensor:
     villager:
-      secondarypoisensor: 80
       nearestbedsensor: 80
-      villagerbabiessensor: 40
-      playersensor: 40
       nearestlivingentitysensor: 40
+      playersensor: 40
+      secondarypoisensor: 80
+      villagerbabiessensor: 40
 unsupported-settings:
   fix-invulnerable-end-crystal-exploit: true
- world_nether:
-   anti-xray:
-      max-block-height: 128
-      hidden-blocks:
-      - ancient_debris
-      - nether_gold_ore
-      - nether_quartz_ore
-  world_the_end:
-    anti-xray:
-      enabled: false
